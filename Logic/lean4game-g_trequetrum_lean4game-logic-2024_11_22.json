@@ -1,0 +1,1219 @@
+{
+  "inventory": [
+    "exact",
+    "GameLogic.AsciiTable",
+    "[anonymous]",
+    "GameLogic.and_intro",
+    "GameLogic.and_def",
+    "have",
+    "GameLogic.Precedence",
+    "GameLogic.and_left",
+    "GameLogic.and_right",
+    "assumption",
+    "constructor",
+    "cases",
+    "GameLogic.modus_ponens",
+    "GameLogic.FunElim",
+    "GameLogic.FunIntro",
+    "GameLogic.identity",
+    "GameLogic.and_comm",
+    "GameLogic.imp_trans",
+    "apply",
+    "intro",
+    "repeat",
+    "GameLogic.or_inl",
+    "GameLogic.or_def",
+    "GameLogic.or_inr",
+    "GameLogic.or_elim",
+    "GameLogic.or_comm",
+    "GameLogic.iff_intro",
+    "GameLogic.iff_def",
+    "GameLogic.iff_mp",
+    "GameLogic.iff_mpr",
+    "nth_rewrite",
+    "rw",
+    "GameLogic.and_assoc",
+    "GameLogic.or_assoc",
+    "GameLogic.false_def",
+    "GameLogic.false_elim",
+    "GameLogic.modus_tollens",
+    "GameLogic.not_not_not",
+    "contradiction",
+    "exfalso",
+    "left",
+    "right"
+  ],
+  "openedIntro": true,
+  "data": {
+    "AndIntro": {
+      "1": {
+        "code": "exact todo_list",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 16,
+            "positionLineNumber": 1,
+            "positionColumn": 16
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "exact and_intro p s\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "have ai := and_intro a i\r\nhave ou := and_intro o u\r\nexact and_intro ai ou",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 22,
+            "positionLineNumber": 3,
+            "positionColumn": 22
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "have p := vm.left\r\nexact p\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "have q:= h.right\r\nexact q",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 8,
+            "positionLineNumber": 2,
+            "positionColumn": 8
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "have a:= h1.left\r\nhave u:= h2.right\r\nexact and_intro a u",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 20,
+            "positionLineNumber": 3,
+            "positionColumn": 20
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "have h1:=h.left\r\nhave h2 := h1.right\r\nhave h3 := h2.left\r\nhave h4 := h3.left\r\nhave h5 := h4.right\r\nexact h5",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 6,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "have psa := h.left\r\nhave c := h.right.right.left.left\r\nhave cps := and_intro c psa.left\r\nexact and_intro psa.right cps",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 30,
+            "positionLineNumber": 4,
+            "positionColumn": 30
+          }
+        ],
+        "help": []
+      }
+    },
+    "AndTactic": {
+      "1": {
+        "code": "assumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "constructor\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "constructor\r\nconstructor\r\nassumption\r\nassumption\r\nconstructor\r\nassumption\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 7,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "cases h\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 2,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "cases h\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 2,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "cases h1\r\ncases h2\r\nconstructor\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 6,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "cases h\r\ncases left\r\ncases right_1\r\ncases left\r\ncases left_2\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 6,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "constructor\r\ncases h\r\ncases left\r\nassumption\r\nconstructor\r\ncases h\r\ncases right\r\ncases right_1\r\ncases left_2\r\nassumption\r\ncases h\r\ncases left\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 13,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 13,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      }
+    },
+    "ImpIntro": {
+      "1": {
+        "code": "exact bakery_service p",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 23,
+            "positionLineNumber": 1,
+            "positionColumn": 23
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "exact λ(h: C) ↦ h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 18,
+            "positionLineNumber": 1,
+            "positionColumn": 18
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "exact λ(h : I ∧ S) ↦ and_intro (and_right h) (and_left h)",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 58,
+            "positionLineNumber": 1,
+            "positionColumn": 58
+          }
+        ],
+        "help": [
+          0
+        ]
+      },
+      "4": {
+        "code": "exact h2 ∘ h1",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 1,
+            "positionColumn": 14
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "have pqt := imp_trans h1 h3\r\nhave tu := imp_trans pqt h5\r\nexact tu p",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 3,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "exact λc d ↦ h (and_intro c d)",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 31,
+            "positionLineNumber": 1,
+            "positionColumn": 31
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "exact λ(cd:C ∧ D) ↦ h cd.left cd.right",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 39,
+            "positionLineNumber": 1,
+            "positionColumn": 39
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "exact λ(s: S)  ↦ and_intro (h.left s) (h.right s)\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 2,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "have sr := λ(r: R)(t : S) ↦ r\r\nhave sr2 := λ (r: R)(t: ¬S) ↦ r\r\nexact λ(r:R) ↦ and_intro (sr r) (sr2 r)",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 40,
+            "positionLineNumber": 3,
+            "positionColumn": 40
+          }
+        ],
+        "help": []
+      }
+    },
+    "ImpTactic": {
+      "1": {
+        "code": "apply h\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "intro h\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 2,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "intro h\r\ncases h\r\nconstructor\r\nassumption\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 5,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "intro\r\napply h2\r\napply h1\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 5,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "intro\r\napply h5\r\napply h3\r\napply h1\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 5,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "intro\r\nintro\r\napply h\r\nconstructor\r\nrepeat assumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 18,
+            "positionLineNumber": 5,
+            "positionColumn": 18
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "intro\r\napply h\r\napply a.left\r\napply a.right",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 4,
+            "positionColumn": 14
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "intro\r\ncases h\r\nconstructor\r\napply left a\r\napply right a",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 5,
+            "positionColumn": 14
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "repeat {intro; assumption}\r\nintro\r\nconstructor\r\nintro\r\nassumption\r\nintro\r\nassumption",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 7,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      }
+    },
+    "OrIntro": {
+      "1": {
+        "code": "have so : S ∨ O  :=or_inl s\r\nexact so",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 2,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "have ks: K ∨ S := or_inr s\r\nexact ks",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 2,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "have b : B := or_elim h3 h1 h2\r\nexact b",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 8,
+            "positionLineNumber": 2,
+            "positionColumn": 8
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "have oc := or_elim h or_inr or_inl\r\nexact oc",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 2,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "have h3 : C → J ∨ R :=λ hC ↦ or_inl (h1 hC)\r\nhave h4 : R → J ∨ R :=λ hR ↦ or_inr hR\r\nexact or_elim h2 h3 h4",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 23,
+            "positionLineNumber": 3,
+            "positionColumn": 23
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "have fg : G → (G ∨ H) ∧ (G ∨ U) := λg ↦ ⟨or_inl g, or_inl g⟩\r\nhave fhu : H ∧ U → (G ∨ H) ∧ (G ∨ U) :=    λhu ↦ ⟨or_inr hu.left, or_inr hu.right⟩\r\nexact or_elim h fg fhu",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 23,
+            "positionLineNumber": 3,
+            "positionColumn": 23
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "have hvu := h.right\r\nhave ffh : H → (G ∧ H) ∨ (G ∧ U) :=    λx ↦ or_inl ⟨h.left, x⟩\r\nhave ffu : U → (G ∧ H) ∨ (G ∧ U) := λx ↦ or_inr ⟨h.left, x⟩\r\nexact or_elim hvu ffh ffu",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 26,
+            "positionLineNumber": 4,
+            "positionColumn": 26
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "have ip : I → I ∨ P := λx ↦ or_inl x\r\nhave kip : K → I ∨ P := λt ↦ or_inr (h t)\r\nexact λki ↦ or_elim ki kip ip",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 30,
+            "positionLineNumber": 3,
+            "positionColumn": 30
+          }
+        ],
+        "help": []
+      }
+    },
+    "IffIntro": {
+      "1": {
+        "code": "have sj := iff_intro hsj hjs\r\nexact sj",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 2,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "have bp:= iff_mp h\r\nhave pb:= iff_mpr h\r\nhave goal:= and_intro bp pb\r\nexact goal",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 4,
+            "positionColumn": 11
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "have rq:= h1.mp\r\nhave pr:= imp_trans h2 rq\r\nexact pr\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 4,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "have rp:= h1.mpr\r\nhave rq:= imp_trans rp h2\r\nexact rq",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 9,
+            "positionLineNumber": 3,
+            "positionColumn": 9
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "rw [h1]\r\nexact h2\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 1,
+            "positionLineNumber": 3,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "rw [or_assoc]\r\nrw [and_assoc]\r\nexact h",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 8,
+            "positionLineNumber": 3,
+            "positionColumn": 8
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "exact ⟨\r\n    λ⟨pr,rp⟩ q ↦ ⟨λp ↦ (pr ⟨p,q⟩).left, λr ↦ (rp ⟨r,q⟩).left⟩,\r\n    λqpr ↦ ⟨λ⟨p,q⟩ ↦ ⟨(qpr q).mp p, q⟩, λ⟨r,q⟩ ↦ ⟨(qpr q).mpr r, q⟩⟩\r\n  ⟩",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 4,
+            "positionLineNumber": 4,
+            "positionColumn": 4
+          }
+        ],
+        "help": []
+      }
+    },
+    "NotIntro": {
+      "1": {
+        "code": "exact identity\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 15,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "exact imp_trans h false_elim\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 29,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": [
+          0
+        ]
+      },
+      "3": {
+        "code": "exact λ(np : ¬P) ↦ np p\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 24,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "exact λ(h : L ∧ ¬L) ↦ h.right h.left\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 37,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "exact h2 ∘ h1\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "exact λ(a : A) ↦ h a a\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 23,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "exact λ(c : C) ↦ h (λ(_ : B) ↦ c)\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 34,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "exact  λ(sc : ¬S ∧ C) ↦ sc.left s\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 34,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "exact λ(pa : P ∧ A) ↦ h pa.left pa.right\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 41,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "10": {
+        "code": "exact λ(p: P)(a : A) ↦ h (and_intro p a)\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 41,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "11": {
+        "code": "exact λa ↦ h λna ↦ na a\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 24,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "12": {
+        "code": "exact λnb ↦ h (λb ↦ false_elim (nb b))\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 1,
+            "selectionStartColumn": 39,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "NotTactic": {
+      "1": {
+        "code": "intro\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "intro\r\ncontradiction\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "intro\r\nexfalso\r\napply a\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "intro\r\ncases a\r\napply right\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "intro h3\r\napply h2\r\napply h1 at h3\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "intro\r\napply h\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "intro\r\napply h\r\nintro\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "intro\r\ncases a\r\napply left\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "9": {
+        "code": "intro\r\napply h\r\ncases a\r\nassumption\r\ncases a\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "10": {
+        "code": "intro p q\r\napply h\r\nconstructor\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "11": {
+        "code": "intro\r\napply h\r\nintro\r\napply a_1\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 5,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "12": {
+        "code": "intro\r\napply h\r\nintro h1\r\ncontradiction\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 14,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "OrTactic": {
+      "1": {
+        "code": "left\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "right\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 2,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "cases h3\r\napply h1 at h\r\nassumption\r\n\r\napply h2 at h\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "cases h\r\nright\r\nassumption\r\n\r\nleft\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "cases h2\r\napply h1 at h\r\nleft\r\nassumption\r\n\r\nright\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "constructor\r\ncases h\r\nleft\r\nassumption\r\ncases h_1\r\nright\r\nassumption\r\ncases h\r\nleft\r\nassumption\r\ncases h_1\r\nright\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 13,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "cases h\r\ncases right\r\nleft\r\nconstructor\r\nassumption\r\nassumption\r\nright\r\nconstructor\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 10,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "8": {
+        "code": "intro\r\ncases a\r\napply h at h_1\r\nright\r\nassumption\r\nleft\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 7,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    },
+    "IffTactic": {
+      "1": {
+        "code": "constructor\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 3,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "2": {
+        "code": "cases h\r\nconstructor\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "3": {
+        "code": "intro h3\r\napply h2 at h3\r\napply h1.mp\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "4": {
+        "code": "intro h3\r\napply h1.mpr at h3\r\napply h2 at h3\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 4,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "5": {
+        "code": "cases h1\r\ncases h2\r\nconstructor\r\nintro h3\r\nconstructor\r\napply and_left\r\napply mp_1\r\nintro x\r\napply h3\r\nintro ⟨pqnr,rpnq⟩ r\r\napply x\r\nconstructor\r\nintro p\r\ncases pqnr p\r\nleft\r\nassumption\r\nright\r\nintro s\r\napply h\r\napply mpr\r\nassumption\r\nintro\r\nintro q\r\napply rpnq\r\nleft\r\nrepeat assumption\r\napply mp\r\nassumption\r\nconstructor\r\napply and_left\r\napply and_right\r\napply mp_1\r\nintro x\r\napply h3\r\nintro ⟨pqnr,rpnq⟩ r\r\napply x\r\nconstructor\r\nintro p\r\ncases pqnr p\r\nleft\r\nassumption\r\nright\r\nintro s\r\napply h\r\napply mpr\r\nassumption\r\nintro sp\r\napply rpnq\r\ncases sp\r\nleft\r\napply mpr\r\nassumption\r\nright\r\nassumption\r\napply mp\r\nassumption\r\napply modus_tollens\r\nassumption\r\napply and_right\r\napply and_right\r\napply mp_1\r\nintro x\r\napply h3\r\nintro ⟨pqnr, rpnq⟩ r\r\napply x\r\nconstructor\r\nintro p\r\ncases pqnr p\r\nleft\r\nassumption\r\nright\r\nintro\r\napply h\r\nassumption\r\nintro\r\napply rpnq\r\nleft\r\nassumption\r\napply mp\r\nassumption\r\nintro ⟨p, q, nr⟩\r\nintro\r\napply mpr_1\r\nconstructor\r\nassumption\r\nconstructor\r\nassumption\r\napply modus_tollens\r\nrepeat assumption\r\nintro\r\nintro\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 92,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "6": {
+        "code": "intro x y\r\napply h\r\napply or_assoc.mp\r\nassumption\r\napply and_assoc.mp\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 6,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      },
+      "7": {
+        "code": "constructor\r\nintro h\r\nintro y\r\nconstructor\r\nintro z\r\nhave h1: P ∧ Q := and_intro z y\r\nrw [h] at h1\r\napply and_left h1\r\nintro\r\nhave h1 :R ∧ Q := and_intro a y\r\ncases h\r\napply mpr at h1\r\napply and_left h1\r\nintro qpr\r\nconstructor\r\nintro ⟨left,q⟩\r\nconstructor\r\napply qpr at q\r\nrw [q] at left\r\nassumption\r\nassumption\r\nintro rq\r\ncases rq\r\nconstructor\r\napply qpr at right\r\ncases right\r\napply mpr at left\r\nassumption\r\nassumption\r\n",
+        "completed": true,
+        "selections": [
+          {
+            "selectionStartLineNumber": 29,
+            "selectionStartColumn": 11,
+            "positionLineNumber": 1,
+            "positionColumn": 1
+          }
+        ],
+        "help": []
+      }
+    }
+  },
+  "difficulty": 2,
+  "typewriterMode": false
+}
